@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 75%;
+    margin: 20px auto;
+    background-color:whitesmoke;
+}
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+
+ a{
+    text-decoration: none;
+ }
+ nav ul li{
+    display: inline-block;
+    position: relative;
+ }
+ nav ul li a{
+    padding: 20px 30px;
+    display: block;
+    color: black;
+    font-family: arial;
+    font-weight:  400px;
+    z-index: 1;
+    position: relative; 
+}
+nav ul li:hover > a{
+    color: aliceblue;
+}
+nav ul li a::before{
+    content: '';
+    bottom: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    background-color: brown;
+    z-index: -1;
+    transition: .3s;
+    position: absolute;
+}
+nav ul li:hover > a::before{
+    width: 100%;
+}
+nav ul li ul li{
+    display: block;
+    border-bottom: 1px solid;
+}
+nav ul li ul li:last-child{
+    border: none;
+}
+nav ul li ul {
+    
+    width: 200px;
+    border-top:2px solid ;
+    position: absolute;
+    background-color: beige;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+    opacity: 0;
+    margin-top: 50px;
+    visibility: hidden;
+    transition: 300ms;
+}
+nav ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+nav ul li ul li ul{
+    margin-left: 100%;
+}
+#detail {
+    width: 800px;
+    padding: 25px;
+    margin: 15px auto;
+    text-align: justify;
+}
+.login{
+    width: 600px;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 25px;
+    border: 1px solid;
+    text-align: justify;
+}
+.login h1,
+.login button{
+    text-align: center;
+}
